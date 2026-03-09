@@ -14,25 +14,25 @@ Real-world applications include automated cancer grading, cell counting, and com
 
 ## 📊 Results
 
-> Model trained up to Epoch 82 (training interrupted — still improving)
-
 | Metric | Value |
 |--------|-------|
-| Val Loss | 0.9017 |
-| mIoU (excl. background) | 0.180 |
-| Dice Score (excl. background) | 0.286 |
+| Val Loss | 1.3023 |
+| mIoU (excl. background) | 0.309 |
+| Dice Score (excl. background) | 0.459 |
+| mIoU (incl. background) | 0.410 |
+| Dice Score (incl. background) | 0.546 |
 
 ### Per-Class Performance
 
 | Class | IoU | Dice Score |
 |-------|-----|------------|
-| Background | 0.646 | 0.785 |
-| Yellow Cell | 0.001 | 0.002 |
-| Red Cell | 0.200 | 0.333 |
-| Green Cell | 0.353 | 0.522 |
-| Blue Cell | 0.167 | 0.286 |
+| Background | 0.811 | 0.896 |
+| Yellow Cell | 0.122 | 0.217 |
+| Red Cell | 0.361 | 0.530 |
+| Green Cell | 0.449 | 0.619 |
+| Blue Cell | 0.306 | 0.469 |
 
-**Note:** Background is excluded from mIoU and Dice Score — including it would inflate metrics since it covers 83.6% of all pixels. Green Cell scored highest as the most common cell type. Yellow Cell at 0.2% of pixels remains the hardest class — a known challenge in medical image segmentation with severe class imbalance.
+**Note:** Background is excluded from mIoU and Dice Score — including it would inflate metrics since it covers 83.6% of all pixels. Green Cell scored highest as the most common cell type (8.6% of pixels). Yellow Cell improved from near-zero to IoU 0.122 thanks to Focal Loss which specifically focuses on hard, rare examples — a known challenge in medical image segmentation with severe class imbalance.
 
 ---
 
