@@ -1,0 +1,18 @@
+# Dataset — too large for GitHub
+cell_dataset/
+
+# Model weights — too large for GitHub
+models/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+*.egg-info/
+
+# Unused files
+main.py
